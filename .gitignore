@@ -1,6 +1,7 @@
 *.iml
 .idea/
 target/
+*/target/
 out/
 rebel.xml
 rebel-remote.xml
