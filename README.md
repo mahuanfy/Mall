@@ -1,13 +1,14 @@
 # Mall
 工程：SSM电商平台工程搭建模板
 
->###一 工程介绍
+># 一 工程介绍
 该工程是一个基于Spring+SpringMVC+Mybatis的电商项目，项目采用多模块化来实现，具体实现如下图所示
+
 ![多模块Maven项目搭建](http://upload-images.jianshu.io/upload_images/1616232-6e42af9269d811a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
->###二 创建工程步骤
-- #####1.首先创建一个普通的项目文件夹`Mall`,里面存放该项目的所有工程
-- #####2.创建`mall-parent`父类工程，后面所有的工程全部继承该工程
+># 二 创建工程步骤
+- #### 1.首先创建一个普通的项目文件夹`Mall`,里面存放该项目的所有工程
+- #### 2.创建`mall-parent`父类工程，后面所有的工程全部继承该工程
   - 创建maven项目：file-->New-->Project-->Maven
 ![image.png](http://upload-images.jianshu.io/upload_images/1616232-d915089528e195a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![image.png](http://upload-images.jianshu.io/upload_images/1616232-41bb56b03c81b1a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -286,7 +287,7 @@
     </build>
 </project>
 ```
-- #####3.创建`mall-common` 通用的工程, 打包方式jar
+- #### 3.创建`mall-common` 通用的工程, 打包方式jar
   - 在`mall-parent`文件上右击创建新的model,和创建maven类似不需要勾选信息,然后会出现如下如下界面
 ![子类](http://upload-images.jianshu.io/upload_images/1616232-80f22eec089bf45a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![image.png](http://upload-images.jianshu.io/upload_images/1616232-911cd4af71845c25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -393,7 +394,7 @@
     </dependencies>
 </project>
 ```
-- #####5.创建`mall-manager-dao`、
+- #### 5.创建`mall-manager-dao`、
   - 在`mall-manager`上右键创建，过程类似`mall-common`的创建但是路径选择需要重写填写，如下图
 ![](http://upload-images.jianshu.io/upload_images/1616232-6f7d935553de6a4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
   - mall-manager-dao:pom.xml
@@ -559,7 +560,7 @@
     </dependencies>
 </project>
 ```
-- #####6.创建mall-web 表现层
+- #### 6.创建mall-web 表现层
 
 ![创建项目](http://upload-images.jianshu.io/upload_images/1616232-78db007c184f755f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](http://upload-images.jianshu.io/upload_images/1616232-0a82c7e2f2ed790b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -677,7 +678,7 @@
 ```
 到此为止已经创建好了项目结构，创建的目录结构如下所示
 ![目录结构](http://upload-images.jianshu.io/upload_images/1616232-b2b7990852c8ba84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
->###三 通过tomcat插件启动项目
+># 三 通过tomcat插件启动项目
 - 这个配置已经在mall-web：pom.xml中配置，无需再配置
 ```
  <build>
@@ -702,5 +703,5 @@
 - 在地址栏输入：localhost:8090(默认是8080)
 ![成功访问](http://upload-images.jianshu.io/upload_images/1616232-29adb68305f03af2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
->#####代码GitHub地址：[project-Mall](https://github.com/821453366/Mall)
->####所属文集：[技术栈](https://www.jianshu.com/nb/11370298)
+>### 代码GitHub地址：[project-Mall](https://github.com/821453366/Mall)
+>## 所属文集：[技术栈](https://www.jianshu.com/nb/11370298)
