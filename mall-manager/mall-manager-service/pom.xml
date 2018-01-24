@@ -49,4 +49,16 @@
             <artifactId>spring-context-support</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <path>/</path>
+                    <port>8091</port>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

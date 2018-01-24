@@ -392,6 +392,18 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <configuration>
+                        <path>/</path>
+                        <port>8091</port>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
 </project>
 ```
 - #### 5.创建`mall-manager-dao`、
@@ -694,10 +706,26 @@
         </plugins>
     </build>
 ```
+- 这个配置已经在mall-manager：pom.xml中配置，无需再配置
+```
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <path>/</path>
+                    <port>8091</port>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+```
 - 首先运行mall-parent-->install
 ![](http://upload-images.jianshu.io/upload_images/1616232-352b24b4125423e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-- 然后运行mall-web -->
+- 然后运行mall-web -->tomcat7:run
 ![](http://upload-images.jianshu.io/upload_images/1616232-7addd926d757cdd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+- 然后运行mall-manager -->tomcat7:run 启动方式如mall-web
 - 项目启动成功
 ![](http://upload-images.jianshu.io/upload_images/1616232-8a8e9f80205a8f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 - 在地址栏输入：localhost:8090(默认是8080)
